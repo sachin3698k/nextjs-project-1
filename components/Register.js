@@ -10,10 +10,6 @@ import { useState } from "react";
 const validationSchema = Yup.object().shape({
   email: Yup.string().email().required(),
   password: Yup.string().min(8).max(32).required(),
-  confirmPassword: Yup.string().oneOf(
-    [Yup.ref("password"), null],
-    "Passwords must match"
-  ),
 });
 
 const Register = () => {
@@ -113,31 +109,6 @@ const Register = () => {
         </div>
 
         <div className="flex flex-wrap">
-          <div className="w-full">
-            <label
-              htmlFor="confirmPassword"
-              className={`w-full p-2 font-bold text-sm mb-2 ${
-                errors && errors.confirmPassword
-                  ? "text-red-400"
-                  : "text-[#3d4f7]"
-              }`}
-            >
-              Confirm Password{" "}
-            </label>
-            <input
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-              // value={"test123456"}
-              {...register("confirmPassword")}
-              placeholder="Confirm Password"
-              className={`w-full text-base mb-3 border-[#D2C1B9] py-3 px-6 rounded-md mt-2 border-[1px] p-2`}
-            />
-            <div className="mb-3 text-normal text-red-500 ">
-              {errors.confirmPassword?.message}
-            </div>
-          </div>
-
           <button
             type="submit"
             className="flex flex-col justify-center items-center w-full text-base mb-3 font-semibold text-white border-[#D2C1B9] py-3 px-6 rounded-md mt-2 border-[1px] p-2 bg-sky-500"
