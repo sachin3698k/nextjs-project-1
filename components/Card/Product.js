@@ -1,35 +1,41 @@
 import React from "react";
 import Image from "next/image";
 
-export const Product = ({ name }) => {
+export const Product = ({
+  productId,
+  propductName,
+  productImage,
+  productDescription,
+  productPrice,
+}) => {
+  console.log(productImage);
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <Image
-        src="/one.jpg"
-        alt="Picture of the author"
-        width={500}
-        height={500}
-      />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{name}</div>
-        <p className="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-          nihil.
-        </p>
+    <>
+      <div className="max-w-sm overflow-hidden rounded shadow-lg">
+        <img
+          src={productImage}
+          alt="Picture of the author"
+          width={500}
+          height={500}
+        ></img>
+        {/* <Image
+src={productImage}
+alt="Picture of the author"
+width={500}
+height={500}
+/> */}
+        <div className="px-6 py-4">
+          <div className="mb-2 text-xl font-bold">{productId}</div>
+          <div className="mb-2 text-xl font-bold">{propductName}</div>
+          <p className="text-base text-gray-700">{productDescription}</p>
+          <h3 className="text-base text-gray-700">
+            <span>₹&nbsp;</span>
+            {productPrice}{" "}
+          </h3>
+        </div>
       </div>
-      <div className="px-6 pt-4 pb-2">
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #photography
-        </span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #travel
-        </span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #winter
-        </span>
-      </div>
-    </div>
+    </>
   );
 };
+
 export default Product;

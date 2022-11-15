@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung",
+    "url": "/products/samsung.jpg",
+    "description": "samsung M53 5g",
+    "price": "25000"
+  },
+  {
+    "id": 2,
+    "name": "Apple",
+    "url": "/products/samsung.jpg",
+    "description": "Iphone 14 plus",
+    "price": "95000"
+  },
+  {
+    "id": 3,
+    "name": "Mi",
+    "url": "/products/samsung.jpg",
+    "description": "Mi Note 7 Pro",
+    "price": "20000"
+  },
+  {
+    "id": 4,
+    "name": "One Plus",
+    "url": "/products/samsung.jpg",
+    "description": "OnePlus Nord CE 5G",
+    "price": "25000"
+  },
+  {
+    "id": 5,
+    "name": "IQOO",
+    "url": "/products/samsung.jpg",
+    "description": "iQOO 9 SE 5G",
+    "price": "339900"
+  },
+  {
+    "id": 6,
+    "name": "Nokia",
+    "url": "/products/samsung.jpg",
+    "description": "Nokia 7.2",
+    "price": "20000"
+  },
+  {
+    "id": 7,
+    "name": "Google Pixel",
+    "url": "/products/samsung.jpg",
+    "description": "Google Pixel 7 Pro",
+    "price": "39900"
+  },
+  {
+    "id": 8,
+    "name": "Realme",
+    "url": "/products/samsung.jpg",
+    "description": "Realme Narzo 30A",
+    "price": "10999"
+  },
+  {
+    "id": 9,
+    "name": "Vivo",
+    "url": "/products/samsung.jpg",
+    "description": "Vivo V20.",
+    "price": "24200"
+  },
+  {
+    "id": 10,
+    "name": "OPPO",
+    "url": "/products/samsung.jpg",
+    "description": "OPPO A53",
+    "price": "14790"
+  }
+]
