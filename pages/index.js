@@ -1,3 +1,4 @@
+import { products } from "../components/Card/data/products";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -7,19 +8,20 @@ import Product from "../components/card/Product";
 
 export const getStaticProps = async () => {
   // Fetching data from jsonplaceholder.
-  var res = "../components/Card/data/product.json";
-  let all = res.json;
-  // Sending fetched data to the page component via props.
+  // const res = await fetch("https://jsonplaceholder.typicode.com/photos&quot;);
+  // let allAlbums = await res.json();
+
   return {
-    props: all,
+    // props: allAlbums,
     props: {
-      list: [all].map((res) => res),
+      productList: products,
+      // productList: allAlbums.map((album) => album),
     },
   };
 };
 
-export default function Home({ list }) {
-  // console.log(productList);
+export default function Home({ productList }) {
+  console.log(productList);
   return (
     <div className={styles.container}>
       <Head>
@@ -29,18 +31,16 @@ export default function Home({ list }) {
       </Head>
       <div className="w-screen flex justify-center items-center p-5 md:grid-cols-2;">
         <div className="grid grid-cols-1 mt-6 gap-y-10 gap-x-6 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4">
-          {[list].map((product) => (
-            <div>
-              <Product
-                productId={product.Id}
-                propductName={product.name}
-                productImage={product.url}
-                productDescription={product.description}
-                productPrice={product.price}
-              />
-            </div>
-          ))}
-          //{" "}
+          {productList.map((product) => (
+            <Product
+              key={product.Id}
+              productId={product.Id}
+              propductName={product.name}
+              productImage={product.url}
+              productDescription={product.description}
+              productPrice={product.price}
+            />
+          ))}{" "}
         </div>
       </div>
     </div>
